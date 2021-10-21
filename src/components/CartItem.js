@@ -11,7 +11,7 @@ export default function CartItem(props) {
         <div className="itemContainer">
             <h4>{props.item.name}</h4>
             <section className="item" style={{ backgroundColor: props.item.color }} />
-            <p>{props.item.price}</p>
+            <p>${props.item.price}</p>
             <p>In cart: {props.item.inCart}</p>
             <button onClick={handleClick}>Remove from cart</button>
         </div>

@@ -33,7 +33,7 @@ export default function ShopItem(props) {
             <h4>{props.item.name}</h4>
             <section className="item" style={{ backgroundColor: props.item.color }}>
             </section>
-            <p>{props.item.price}</p>
+            <p>${props.item.price}</p>
             <input ref={cartInput} type="number" defaultValue="1" />
             <button onClick={handleClick}>Add to cart</button>
         </div>

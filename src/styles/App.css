@@ -35,6 +35,15 @@ nav {
   margin: 16px;
 }
 
+.container-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin: 16px;
+}
+
 .header {
   margin: 16px;
 }
@@ -54,4 +63,8 @@ nav {
   width: 75px;
   height: 50px;
   align-self: center;
+}
+
+.checkoutButton {
+  margin: 16px;
 }

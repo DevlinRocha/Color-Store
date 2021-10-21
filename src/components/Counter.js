@@ -19,7 +19,7 @@ export default function Counter(props) {
         for (let item in newCart) {
             if (newCart[item].id === newItem.id) {
                 const currentCart = newCart[item].inCart;
-                currentCart === 0 ? void(0) : newCart[item].inCart--;
+                currentCart === 1 ? void(0) : newCart[item].inCart--;
             };
         };
         props.setCart(newCart);

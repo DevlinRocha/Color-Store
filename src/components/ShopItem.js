@@ -28,13 +28,28 @@ export default function ShopItem(props) {
         props.setCart(newCart);
     };
 
+    function handleInput(e) {
+        
+        const validCharacters = [
+            "1","2","3","4","5","6","7","8","9","0",
+        ];
+        let valid = false;
+
+        for (let character in validCharacters) {
+            if (e.key === validCharacters[character]) {
+                valid = true;
+            };
+        };
+        valid ? void(0) : e.preventDefault();
+    };
+
     return (
         <div className="itemContainer">
             <h4>{props.item.name}</h4>
             <section className="item" style={{ backgroundColor: props.item.color }}>
             </section>
             <p>${props.item.price}</p>
-            <input ref={cartInput} type="number" defaultValue="1" />
+            <input ref={cartInput} onKeyDown={handleInput} type="number" min="1" defaultValue="1" />
             <button onClick={handleClick}>Add to cart</button>
         </div>
     );

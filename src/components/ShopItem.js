@@ -29,9 +29,10 @@ export default function ShopItem(props) {
     };
 
     function handleInput(e) {
+        console.log(e.key)
 
         const validCharacters = [
-            "1","2","3","4","5","6","7","8","9","0",
+            "1","2","3","4","5","6","7","8","9","0","Backspace","Delete",
         ];
         let valid = false;
 

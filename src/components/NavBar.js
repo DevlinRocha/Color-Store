@@ -7,7 +7,7 @@ export default function NavBar(props) {
         for (let item in props.cart) {
             count += props.cart[item].inCart;
         };
-        return count;
+        return Number(count);
     };
 
     return (

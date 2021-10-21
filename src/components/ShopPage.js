@@ -48,7 +48,7 @@ export default function ShopPage(props) {
 
             <section>
                 <h2 className="header">Featured Items</h2>
-                <section className="container">
+                <section className="pageContainer">
                     {inventory.map(item => {
                         return (
                             <ShopItem key={item.id} item={item} cart={props.cart} setCart={props.setCart} />

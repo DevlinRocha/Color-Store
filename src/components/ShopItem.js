@@ -6,30 +6,30 @@ export default function ShopItem(props) {
     function handleClick() {
         const newCart = [...props.cart];
         const newItem = props.item;
-        const cartAdd = Number(cartInput.current.value);
+        const cartTotal = Number(cartInput.current.value);
 
-        if (cartAdd === 0) return;
+        if (cartTotal === 0) return;
 
         if (newCart.length>0) {
             let duplicate = false;
             for (let item in newCart) {
                 if (newCart[item].id === newItem.id) { // If the item is already in the cart
                     duplicate = true;
-                    newCart[item].inCart += cartAdd;
+                    newCart[item].inCart += cartTotal;
                 } else {
-                    newItem.inCart = cartAdd;
+                    newItem.inCart = cartTotal;
                 };
             };
             duplicate ? void(0) : newCart.push(newItem);
         } else {
-            newItem.inCart = cartAdd;
+            newItem.inCart = cartTotal;
             newCart.push(newItem);
         };
         props.setCart(newCart);
     };
 
     function handleInput(e) {
-        
+
         const validCharacters = [
             "1","2","3","4","5","6","7","8","9","0",
         ];

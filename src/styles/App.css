@@ -27,6 +27,15 @@ nav {
   font-weight: bold;
 }
 
+.pageContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -35,13 +44,25 @@ nav {
   margin: 16px;
 }
 
+.container-nowrap {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 16px;
+  align-items: center;
+}
+
 .container-column {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 16px;
-  align-items: flex-end;
+  align-items: flex-start;
   margin: 16px;
+}
+
+.container-column > p {
+  margin: 0;
 }
 
 .header {
@@ -67,4 +88,36 @@ nav {
 
 .checkoutButton {
   margin: 16px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.counter > button {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 0 3px;
+  width: 25px;
+}
+
+.subtotal {
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin: 16px;
+}
+
+.subtotal > p {
+  margin: 0 16px;
+}
+
+.subtotal > a {
+  margin: 0 16px;
 }

@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-function App() {
+import HomePage from "./components/HomePage";
+import NavBar from "./components/NavBar";
+import ShopPage from "./components/ShopPage";
+import ShoppingCart from "./components/ShoppingCart";
+import PageNotFound from "./components/PageNotFound";
+
+import './styles/App.css';
+
+export default function App() {
+
+  const [cart, setCart] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BrowserRouter>
 
-export default App;
+        <NavBar cart={cart} />
+        
+        <Switch>
+
+            <Route exact path="/" component={HomePage} />
+
+            <Route path="/shop">
+              <ShopPage cart={cart} setCart={setCart} />
+            </Route>
+
+            <Route path="/cart">
+              <ShoppingCart cart={cart} setCart={setCart} />
+            </Route>
+
+            <Route component={PageNotFound} />
+
+        </Switch>
+    </BrowserRouter>
+  );
+};

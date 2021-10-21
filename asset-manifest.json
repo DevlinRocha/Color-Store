@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Color-Store/static/css/main.42b6855b.chunk.css",
-    "main.js": "/Color-Store/static/js/main.e0ccb19a.chunk.js",
-    "main.js.map": "/Color-Store/static/js/main.e0ccb19a.chunk.js.map",
+    "main.js": "/Color-Store/static/js/main.5ec4c653.chunk.js",
+    "main.js.map": "/Color-Store/static/js/main.5ec4c653.chunk.js.map",
     "runtime-main.js": "/Color-Store/static/js/runtime-main.89245fc2.js",
     "runtime-main.js.map": "/Color-Store/static/js/runtime-main.89245fc2.js.map",
     "static/js/2.173fc7fe.chunk.js": "/Color-Store/static/js/2.173fc7fe.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.89245fc2.js",
     "static/js/2.173fc7fe.chunk.js",
     "static/css/main.42b6855b.chunk.css",
-    "static/js/main.e0ccb19a.chunk.js"
+    "static/js/main.5ec4c653.chunk.js"
   ]
 }

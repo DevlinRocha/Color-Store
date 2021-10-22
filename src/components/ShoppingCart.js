@@ -14,7 +14,7 @@ export default function ShoppingCart(props) {
 
     function findTotal() {
         const total = props.cart.reduce((subtotal, item) => subtotal += (item.price * item.inCart), 0);
-        return total.toLocaleString();
+        return Number(total).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
     };
 
     function handleClick() {

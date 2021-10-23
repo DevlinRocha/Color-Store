@@ -2,7 +2,7 @@
 
 A fake store built with React and React Router.
 
-[Check out the store here!](https://devlin-codes.github.io/Color-Store/)
+[Check out the store here!](https://devlinrocha.github.io/Color-Store/)
 
 This was an assignment from [The Odin Project](https://www.theodinproject.com/).
 
